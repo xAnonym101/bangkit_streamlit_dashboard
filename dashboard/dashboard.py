@@ -37,7 +37,7 @@ max_date = days_data["dteday"].max()
  
 with st.sidebar:
     # Menambahkan logo perusahaan
-    st.image(r"C:\Users\steve\Documents\GitHub\bangkit_streamlit_dashboard\dashboard\calendar_image.png")
+    st.image(r"dashboard/calendar_image.png")
     
     # Mengambil start_date & end_date dari date_input
     start_date, end_date = st.date_input(
