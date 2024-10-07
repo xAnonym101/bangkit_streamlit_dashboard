@@ -28,7 +28,7 @@ def create_casual_df(df):
     return casual_df
 
 
-days_data = pd.read_csv("day.csv", delimiter=",")
+days_data = pd.read_csv("alldata.csv", delimiter=",")
 days_data["dteday"] = pd.to_datetime(days_data["dteday"])
 days_data.sample(n=10)
 
@@ -37,7 +37,7 @@ max_date = days_data["dteday"].max()
  
 with st.sidebar:
     # Menambahkan logo perusahaan
-    st.image(r"C:\Users\steve\Downloads\submission\dashboard\calendar_image.png")
+    st.image(r"C:\Users\steve\Documents\GitHub\bangkit_streamlit_dashboard\dashboard\calendar_image.png")
     
     # Mengambil start_date & end_date dari date_input
     start_date, end_date = st.date_input(
