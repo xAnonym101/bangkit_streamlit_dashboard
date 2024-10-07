@@ -28,7 +28,7 @@ def create_casual_df(df):
     return casual_df
 
 
-days_data = pd.read_csv("day.csv")
+days_data = pd.read_csv("day.csv", delimiter=",")
 days_data["dteday"] = pd.to_datetime(days_data["dteday"])
 days_data.sample(n=10)
 
