@@ -1,8 +1,6 @@
-import numpy as np
-import pandas as pd
-import matplotlib as plotter
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-#khusus .py ada tambahan:
-from babel.numbers import format_currency
+numpy
+pandas
+matplotlib
+seaborn
+babel
+streamlit
