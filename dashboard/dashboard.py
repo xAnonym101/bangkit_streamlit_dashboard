@@ -6,7 +6,7 @@ from babel.numbers import format_currency
 sns.set(style='dark')
 
 
-days_data = pd.read_csv("dashboard\alldata.csv", delimiter=",")
+days_data = pd.read_csv("dashboard/alldata.csv", delimiter=",")
 days_data["dteday"] = pd.to_datetime(days_data["dteday"])        
         
 def create_minMax_data(df):
