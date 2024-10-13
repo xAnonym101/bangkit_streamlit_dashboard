@@ -31,7 +31,7 @@ borrower_data = create_borrower_data(days_data)
 tab1, tab2 = st.tabs(["Question 1", "Question 2"])
 with tab1:
     fig_min, ax_min = plt.subplots(figsize=(8, 6))
-    ax_min.bar(["Spring", "Winter"], filtered_minMax_data[("cnt", "min")], color="#FF5733")
+    ax_min.bar(["Spring", "Winter"], filtered_minMax_data[("cnt", "min")], color=["#ABD8E6", "#D3D3D3"])
     ax_min.set_xlabel("Season", fontsize=12)
     ax_min.set_ylabel("Minimum Count", fontsize=12)
     ax_min.set_title("Minimum Counts per Season", fontsize=14)
@@ -39,7 +39,7 @@ with tab1:
     st.pyplot(fig_min)
     
     fig_max, ax_max = plt.subplots(figsize=(8, 6))
-    ax_min.bar(["Spring", "Winter"], filtered_minMax_data[("cnt", "max")], color="#FF5733")
+    ax_min.bar(["Spring", "Winter"], filtered_minMax_data[("cnt", "max")], color=["#ABD8E6", "#D3D3D3"])
     ax_min.set_xlabel("Season", fontsize=12)
     ax_min.set_ylabel("Maximum Count", fontsize=12)
     ax_min.set_title("Maximum Counts per Season", fontsize=14)
@@ -47,10 +47,10 @@ with tab1:
     st.pyplot(fig_min) 
 with tab2:
     fig_min, ax_min = plt.subplots(figsize=(8, 6))
-    ax_min.bar(["Spring", "Winter"], borrower_data["registered"], color="#FF5733")
-    ax_min.set_xlabel("Season", fontsize=12)
-    ax_min.set_ylabel("Minimum Count", fontsize=12)
-    ax_min.set_title("Minimum Counts per Season", fontsize=14)
+    ax_min.bar(["Weekend", "Weekday"], borrower_data["registered"], color=["#90CAF9", "#FF5733"])
+    ax_min.set_xlabel("Day Type", fontsize=12)
+    ax_min.set_ylabel("Value", fontsize=12)
+    ax_min.set_title("Comparison of Licensed Borrowers Between Weekday and Weekend", fontsize=14)
 
     st.subheader("Minimum Counts per Season")
     st.pyplot(fig_min)
