@@ -5,10 +5,9 @@ import streamlit as st
 from babel.numbers import format_currency
 sns.set(style='dark')
 
-
-days_data = pd.read_csv("day_data.csv", delimiter=",")
+days_data = pd.read_csv("dashboard/day_data.csv", delimiter=",")
 days_data["dteday"] = pd.to_datetime(days_data["dteday"])
-hours_data = pd.read_csv("hour_data.csv", delimiter=",")
+hours_data = pd.read_csv("dashboard/hour_data.csv", delimiter=",")
 hours_data["dteday"] = pd.to_datetime(hours_data["dteday"])  
         
 def create_minMax_data(df):
